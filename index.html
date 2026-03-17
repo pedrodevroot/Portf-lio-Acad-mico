@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Pedro Lucas</title>
+
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="menu-lateral">
+        <nav>
+        <a href="#" onclick="carregarConteudo('sobre')">Sobre mim</a>
+        <a href="#" onclick="carregarConteudo('projetos')">Projetos</a>
+        <a href="#" onclick="carregarConteudo('formacao')">Formação Acadêmica</a>
+        <a href="#" onclick="carregarConteudo('cursos')">Cursos Complementares</a>
+        <a href="#" onclick="carregarConteudo('competencias')">Competências</a>
+        <a href="#" onclick="carregarConteudo('competencias')">Links profissionais</a>
+        <button onclick="ativarAdmin()" class="btn-admin">Modo Admin</button>
+    </nav>
+    </section>
+
+    <section id="home">
+
+        <div class="capa">
+            <img src="imagens/capa1.jpg" alt="Imagem de capa">
+        </div>
+
+        <div class="foto-perfil">
+            <img src="imagens/perfil.jpg" alt="Foto de perfil" onclick="abrirImagem(this)">
+        </div>
+
+        <div class="container-follow">
+            <a href="https://www.linkedin.com/in/pedro-lucas-76870237b/" target="_blank" class="btn-follow">
+                Seguir
+            </a>
+        </div>
+
+        <div class="bio">
+            <h2>Pedro Lucas</h2>
+            <p>Back-End Developer | Cybersecurity 👾</p>
+        </div>
+
+        <div class="info-pessoal">
+
+        <div class="localizacao">
+        📍 Brasil
+        </div>
+
+        <div class="data-aniversario">
+        🎂 11/04/2001
+        </div>
+
+        </div>
+
+        <section id="feed">
+            <h3>Feed</h3>
+        </section>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+    <div id="modalImagem" class="modal" onclick="fecharImagem(event)">
+    <img id="imagemExpandida">
+</div>
+</body>
+</html>
