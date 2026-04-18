@@ -1,111 +1,6 @@
-function inicializarProjetos() {
-    let projetos = carregarDados("projetos");
-    const janosysIndex = projetos.findIndex(p => p.nome === "Janosys Project");
+var adminLogado = false;
 
-    if (janosysIndex === -1) {
-        projetos.unshift({
-            nome: "Janosys Project",
-            imagem: "imagens/janosys.jpg",
-            link: "https://github.com/pedrodevroot/Janosys-Project",
-            descricao: "Projeto desenvolvido para a prefeitura de São José dos Campos."
-        });
-    } else {
-        projetos[janosysIndex].imagem = "imagens/janosys.jpg";
-    }
-
-    salvarDados("projetos", projetos);
-}
-
-inicializarProjetos();
-
-function carregarConteudo(secao) {
-    let feed = document.getElementById("feed");
-    feed.innerHTML = "";
-
-    switch (secao) {
-        case "admin":
-            if (!adminLogado) { feed.innerHTML = "<p>Acesso negado</p>"; break; }
-            renderizarPainelAdmin(feed);
-            break;
-
-        case "sobre":
-            feed.innerHTML = `
-                <h3>Sobre mim</h3>
-                <p>Sou estudante de Desenvolvimento Back-End e Cybersecurity.</p>
-                <p>Buscando evoluir na área de segurança ofensiva.</p>
-            `;
-            break;
-
-        case "projetos":
-            let projetos = carregarDados("projetos");
-            feed.innerHTML = "<h3>Projetos</h3><div class='grid-projetos'></div>";
-            let grid = feed.querySelector('.grid-projetos');
-            projetos.forEach(p => {
-                grid.innerHTML += `
-                    <div class="card-projeto">
-                        <div class="card-projeto-img">
-                            <img src="${p.imagem}" alt="${p.nome}" onerror="this.src='imagens/capa1.jpg'">
-                        </div>
-                        <div class="card-projeto-info">
-                            <h4>${p.nome}</h4>
-                            ${p.descricao ? `<p>${p.descricao}</p>` : ""}
-                            <a href="${p.link}" target="_blank" class="btn-github">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                                Ver no GitHub
-                            </a>
-                        </div>
-                    </div>
-                `;
-            });
-            break;
-
-        case "formacao":
-            let formacoes = carregarDados("formacoes");
-            feed.innerHTML = `<h3>Formação Acadêmica</h3>`;
-            if (formacoes.length === 0) {
-                feed.innerHTML += `
-                    <div class="card-formacao">
-                        <div class="formacao-icone">🎓</div>
-                        <div class="formacao-info">
-                            <h4>Desenvolvimento de Software Multiplataforma</h4>
-                            <p class="formacao-inst">Graduação em andamento</p>
-                        </div>
-                    </div>
-                `;
-            } else {
-                formacoes.forEach(f => {
-                    feed.innerHTML += `
-                        <div class="card-formacao">
-                            <div class="formacao-icone">🎓</div>
-                            <div class="formacao-info">
-                                <h4>${f.nome}</h4>
-                                <p class="formacao-inst">${f.instituicao || ""}</p>
-                                ${f.pdf ? `<a href="${f.pdf}" target="_blank" class="btn-pdf">📄 Ver certificado / diploma</a>` : ""}
-                            </div>
-                        </div>
-                    `;
-                });
-            }
-            break;
-
-        case "cursos":
-            let cursos = carregarDados("cursos");
-            feed.innerHTML = "<h3>Cursos Complementares</h3>";
-            cursos.forEach(c => { feed.innerHTML += `<p class="item-lista">▹ ${c}</p>`; });
-            break;
-
-        case "competencias":
-            let skills = ["HTML", "CSS", "JavaScript", "Python", "Linux", "Cybersecurity"];
-            feed.innerHTML = "<h3>Competências</h3>";
-            skills.forEach(s => { feed.innerHTML += `<p class="item-lista">▹ ${s}</p>`; });
-            break;
-
-        default:
-            feed.innerHTML = "<p>Selecione uma opção no menu.</p>";
-    }
-}
-
-// PAINEL ADMIN 
+// PAINEL ADMIN
 function renderizarPainelAdmin(feed) {
     feed.innerHTML = `
         <h3>⚙️ Painel Admin</h3>
@@ -305,15 +200,6 @@ function atualizarListaAdmin() {
     `;
 }
 
-function mostrarToast(msg, tipo) {
-    let toast = document.createElement("div");
-    toast.className = `toast toast-${tipo}`;
-    toast.textContent = msg;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.classList.add("toast-visivel"), 10);
-    setTimeout(() => { toast.classList.remove("toast-visivel"); setTimeout(() => toast.remove(), 400); }, 3000);
-}
-
 function ativarAdmin() {
     let senha = prompt("🔐 Senha de admin:");
     if (senha === "1234") {
@@ -323,17 +209,4 @@ function ativarAdmin() {
     } else {
         mostrarToast("Senha incorreta!", "erro");
     }
-}
-
-function salvarDados(chave, dados) { localStorage.setItem(chave, JSON.stringify(dados)); }
-function carregarDados(chave) { return JSON.parse(localStorage.getItem(chave)) || []; }
-
-function abrirImagem(imagem) {
-    let modal = document.getElementById("modalImagem");
-    document.getElementById("imagemExpandida").src = imagem.src;
-    modal.classList.add("ativo");
-}
-
-function fecharImagem(event) {
-    if (event.target.id === "modalImagem") document.getElementById("modalImagem").classList.remove("ativo");
 }

@@ -1,0 +1,159 @@
+/* MENU LATERAL */
+#menu-lateral {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(180deg, #161b22, #0d1117);
+    border-right: 1px solid #30363d;
+    position: fixed;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+}
+
+#menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#menu-lateral a {
+    position: relative;
+    text-decoration: none;
+    color: #c9d1d9;
+    font-weight: 500;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Linha lateral animada */
+#menu-lateral a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 0%;
+    width: 4px;
+    background-color: #00ff88;
+    border-radius: 0 4px 4px 0;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+#menu-lateral a:hover {
+    background-color: #21262d;
+    color: #00ff88;
+    padding-left: 20px;
+}
+
+#menu-lateral a:hover::before {
+    height: 70%;
+}
+
+/* HOME */
+#home {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding-left: 20px;
+}
+
+/* CAPA */
+.capa {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, #00ff88, #0066ff);
+}
+
+.capa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOTO PERFIL */
+.foto-perfil {
+    position: relative;
+    top: -60px;
+    left: 40px;
+}
+
+.foto-perfil img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid #0d1117;
+    object-fit: cover;
+    object-position: center 0%;
+    cursor: pointer;
+}
+
+/* BOTÃO LINKEDIN */
+.container-follow {
+    position: relative;
+    top: -100px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-follow {
+    text-decoration: none;
+    background-color: #00ff88;
+    color: #0d1117;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-follow:hover {
+    background-color: #00cc6a;
+    transform: scale(1.05);
+}
+
+/* BIO */
+.bio {
+    margin: -40px 40px 20px 40px;
+}
+
+.bio h2 {
+    font-size: 24px;
+}
+
+.bio p {
+    color: #8b949e;
+    margin-top: 5px;
+}
+
+/* LOCALIZAÇÃO E DATA */
+.info-pessoal {
+    display: flex;
+    gap: 20px; /* espaço entre eles */
+    margin-left: 40px;
+    margin-bottom: 10px;
+    color: #8b949e;
+}
+
+/* FEED */
+#feed {
+    margin: 30px 40px;
+    padding: 20px;
+    background-color: #161b22;
+    border-radius: 10px;
+    border: 1px solid #30363d;
+    min-height: 200px;
+}
+
+#feed h3 {
+    margin-bottom: 15px;
+    color: #00ff88;
+}
+
+#feed p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}

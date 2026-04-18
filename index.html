@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Pedro Lucas</title>
 
-    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
@@ -17,7 +20,7 @@
         <a href="#" onclick="carregarConteudo('formacao')">Formação Acadêmica</a>
         <a href="#" onclick="carregarConteudo('cursos')">Cursos Complementares</a>
         <a href="#" onclick="carregarConteudo('competencias')">Competências</a>
-        <a href="#" onclick="carregarConteudo('competencias')">Links profissionais</a>
+        <a href="#" onclick="carregarConteudo('links')">Links profissionais</a>
         <button onclick="ativarAdmin()" class="btn-admin">Modo Admin</button>
     </nav>
     </section>
@@ -25,11 +28,11 @@
     <section id="home">
 
         <div class="capa">
-            <img src="imagens/capa1.jpg" alt="Imagem de capa">
+            <img src="assets/img/capa1.jpg" alt="Imagem de capa">
         </div>
 
         <div class="foto-perfil">
-            <img src="imagens/perfil.jpg" alt="Foto de perfil" onclick="abrirImagem(this)">
+            <img src="assets/img/perfil.jpg" alt="Foto de perfil" onclick="abrirImagem(this)">
         </div>
 
         <div class="container-follow">
@@ -62,7 +65,10 @@
     </section>
 
 
-    <script src="script.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/app.js"></script>
 
     <div id="modalImagem" class="modal" onclick="fecharImagem(event)">
     <img id="imagemExpandida">

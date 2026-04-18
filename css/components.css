@@ -1,0 +1,265 @@
+/* MODAL IMAGEM */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+
+/*  GRID PROJETOS */
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.card-projeto {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-4px);
+    border-color: #00ff88;
+}
+
+.card-projeto-img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    background: #0d1117;
+}
+
+.card-projeto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-projeto-info {
+    padding: 15px;
+}
+
+.card-projeto-info h4 {
+    color: #e6edf3;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.card-projeto-info p {
+    color: #8b949e;
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #21262d;
+    border: 1px solid #30363d;
+    color: #00ff88;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-github:hover {
+    background: #00ff88;
+    color: #0d1117;
+    border-color: #00ff88;
+}
+
+/* CARD FORMAÇÃO  */
+.card-formacao {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+}
+
+.card-formacao:hover { border-color: #00ff88; }
+
+.formacao-icone {
+    font-size: 28px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.formacao-info h4 { color: #e6edf3; margin-bottom: 4px; }
+.formacao-inst { color: #8b949e; font-size: 13px; margin-bottom: 8px; }
+
+.btn-pdf {
+    display: inline-block;
+    background: #21262d;
+    border: 1px solid #30363d;
+    color: #58a6ff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-pdf:hover { background: #58a6ff; color: #0d1117; }
+
+/* ITEM LISTA  */
+.item-lista {
+    color: #c9d1d9;
+    padding: 8px 0;
+    border-bottom: 1px solid #21262d;
+    font-size: 14px;
+}
+
+/* COMPETÊNCIAS */
+.grid-competencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.card-competencia {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 20px;
+    transition: border-color 0.2s;
+}
+
+.card-competencia:hover { border-color: #00ff88; }
+
+.competencia-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #21262d;
+}
+
+.competencia-icone { font-size: 22px; }
+
+.competencia-titulo h4 {
+    color: #e6edf3;
+    font-size: 15px;
+}
+
+.skill-item { margin-bottom: 14px; }
+.skill-item:last-child { margin-bottom: 0; }
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.skill-nome {
+    color: #c9d1d9;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.skill-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.skill-tag-avancado { background: rgba(0, 255, 136, 0.15); color: #00ff88; }
+.skill-tag-intermediario { background: rgba(88, 166, 255, 0.15); color: #58a6ff; }
+.skill-tag-basico { background: rgba(248, 81, 73, 0.15); color: #f85149; }
+
+.skill-barra {
+    width: 100%;
+    height: 6px;
+    background: #21262d;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progresso {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(90deg, #00ff88, #00cc6a);
+    transition: width 0.8s ease;
+}
+
+/* CARD LINK PROFISSIONAL */
+.card-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card-link:hover {
+    border-color: #00ff88;
+    transform: translateY(-4px);
+}
+
+.link-icone {
+    min-width: 40px;
+    text-align: center;
+    color: #8b949e;
+    transition: color 0.2s;
+}
+
+.card-link:hover .link-icone { color: #00ff88; }
+
+.link-info h4 { color: #e6edf3; margin-bottom: 4px; }
+.link-info p { color: #8b949e; font-size: 13px; margin: 0; }
+
+/*  TOAST  */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.toast-visivel { opacity: 1; transform: translateY(0); }
+.toast-ok { background: #00ff88; color: #0d1117; }
+.toast-erro { background: #f85149; color: #fff; }
