@@ -137,6 +137,71 @@
     font-size: 14px;
 }
 
+/* CURSOS COMPLEMENTARES */
+.grid-cursos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.card-curso {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: border-color 0.2s, transform 0.2s;
+    animation: fadeInUp 0.4s ease both;
+}
+
+.card-curso:hover {
+    border-color: #00ff88;
+    transform: translateY(-4px);
+}
+
+.curso-icone {
+    font-size: 26px;
+    min-width: 36px;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.curso-info h4 {
+    color: #e6edf3;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.curso-inst {
+    color: #8b949e;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.curso-periodo {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    background: rgba(88, 166, 255, 0.15);
+    color: #58a6ff;
+    font-weight: 500;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* COMPETÊNCIAS */
 .grid-competencias {
     display: grid;

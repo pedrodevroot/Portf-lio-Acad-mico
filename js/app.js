@@ -121,8 +121,37 @@ function carregarConteudo(secao) {
 
         case "cursos":
             let cursos = carregarDados("cursos");
-            feed.innerHTML = "<h3>Cursos Complementares</h3>";
-            cursos.forEach(c => { feed.innerHTML += `<p class="item-lista">▹ ${c}</p>`; });
+            feed.innerHTML = "<h3>Cursos Complementares</h3><div class='grid-cursos'></div>";
+            let gridCursos = feed.querySelector('.grid-cursos');
+            cursos.forEach((c, i) => {
+                let nome = c;
+                let instituicao = "";
+                let periodo = "";
+
+                let sepInst = c.indexOf(" — ");
+                if (sepInst !== -1) {
+                    nome = c.substring(0, sepInst);
+                    let resto = c.substring(sepInst + 3);
+                    let matchPeriodo = resto.match(/\((.+)\)$/);
+                    if (matchPeriodo) {
+                        instituicao = resto.substring(0, resto.lastIndexOf("(")).trim();
+                        periodo = matchPeriodo[1];
+                    } else {
+                        instituicao = resto;
+                    }
+                }
+
+                gridCursos.innerHTML += `
+                    <div class="card-curso" style="animation-delay: ${i * 0.1}s">
+                        <div class="curso-icone">📘</div>
+                        <div class="curso-info">
+                            <h4>${nome}</h4>
+                            ${instituicao ? `<p class="curso-inst">${instituicao}</p>` : ""}
+                            ${periodo ? `<span class="curso-periodo">${periodo}</span>` : ""}
+                        </div>
+                    </div>
+                `;
+            });
             break;
 
         case "competencias":
