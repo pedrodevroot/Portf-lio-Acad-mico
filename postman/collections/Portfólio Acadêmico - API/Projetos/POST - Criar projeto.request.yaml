@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{baseUrl}}/api/projetos"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nome": "Novo Projeto",
+      "link": "https://github.com/pedrodevroot/novo-projeto",
+      "imagem": "assets/img/novo.png",
+      "descricao": "Descrição do novo projeto"
+    }
+order: 3000

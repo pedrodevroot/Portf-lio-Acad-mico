@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/api/cursos"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nome": "Ethical Hacking",
+      "instituicao": "DIO",
+      "periodo": "2024"
+    }
+order: 3000

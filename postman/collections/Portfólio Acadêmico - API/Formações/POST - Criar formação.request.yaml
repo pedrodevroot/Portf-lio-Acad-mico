@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{baseUrl}}/api/formacoes"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nome": "Análise e Desenvolvimento de Sistemas",
+      "instituicao": "FATEC",
+      "pdf": ""
+    }
+order: 3000

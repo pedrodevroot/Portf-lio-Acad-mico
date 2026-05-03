@@ -1,0 +1,162 @@
+{
+  "info": {
+    "name": "Portfólio Acadêmico - API",
+    "description": "Coleção para testar a API do portfólio (projetos, cursos, formações).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" }
+  ],
+  "item": [
+    {
+      "name": "Projetos",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/projetos", "host": ["{{baseUrl}}"], "path": ["api", "projetos"] }
+          }
+        },
+        {
+          "name": "GET - Buscar por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/projetos/1", "host": ["{{baseUrl}}"], "path": ["api", "projetos", "1"] }
+          }
+        },
+        {
+          "name": "POST - Criar projeto",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Novo Projeto\",\n  \"link\": \"https://github.com/pedrodevroot/novo-projeto\",\n  \"imagem\": \"assets/img/novo.png\",\n  \"descricao\": \"Descrição do novo projeto\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/projetos", "host": ["{{baseUrl}}"], "path": ["api", "projetos"] }
+          }
+        },
+        {
+          "name": "PUT - Atualizar projeto",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Projeto Atualizado\",\n  \"descricao\": \"Descrição atualizada\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/projetos/1", "host": ["{{baseUrl}}"], "path": ["api", "projetos", "1"] }
+          }
+        },
+        {
+          "name": "DELETE - Remover projeto",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/projetos/1", "host": ["{{baseUrl}}"], "path": ["api", "projetos", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cursos",
+      "item": [
+        {
+          "name": "GET - Listar todos",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/cursos", "host": ["{{baseUrl}}"], "path": ["api", "cursos"] }
+          }
+        },
+        {
+          "name": "GET - Buscar por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/cursos/1", "host": ["{{baseUrl}}"], "path": ["api", "cursos", "1"] }
+          }
+        },
+        {
+          "name": "POST - Criar curso",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Ethical Hacking\",\n  \"instituicao\": \"DIO\",\n  \"periodo\": \"2024\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/cursos", "host": ["{{baseUrl}}"], "path": ["api", "cursos"] }
+          }
+        },
+        {
+          "name": "PUT - Atualizar curso",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Curso Atualizado\",\n  \"periodo\": \"2025\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/cursos/1", "host": ["{{baseUrl}}"], "path": ["api", "cursos", "1"] }
+          }
+        },
+        {
+          "name": "DELETE - Remover curso",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/cursos/1", "host": ["{{baseUrl}}"], "path": ["api", "cursos", "1"] }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Formações",
+      "item": [
+        {
+          "name": "GET - Listar todas",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/formacoes", "host": ["{{baseUrl}}"], "path": ["api", "formacoes"] }
+          }
+        },
+        {
+          "name": "GET - Buscar por ID",
+          "request": {
+            "method": "GET",
+            "url": { "raw": "{{baseUrl}}/api/formacoes/1", "host": ["{{baseUrl}}"], "path": ["api", "formacoes", "1"] }
+          }
+        },
+        {
+          "name": "POST - Criar formação",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Análise e Desenvolvimento de Sistemas\",\n  \"instituicao\": \"FATEC\",\n  \"pdf\": \"\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/formacoes", "host": ["{{baseUrl}}"], "path": ["api", "formacoes"] }
+          }
+        },
+        {
+          "name": "PUT - Atualizar formação",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"DSM - 2º semestre\",\n  \"instituicao\": \"FATEC SJC\"\n}"
+            },
+            "url": { "raw": "{{baseUrl}}/api/formacoes/1", "host": ["{{baseUrl}}"], "path": ["api", "formacoes", "1"] }
+          }
+        },
+        {
+          "name": "DELETE - Remover formação",
+          "request": {
+            "method": "DELETE",
+            "url": { "raw": "{{baseUrl}}/api/formacoes/1", "host": ["{{baseUrl}}"], "path": ["api", "formacoes", "1"] }
+          }
+        }
+      ]
+    }
+  ]
+}

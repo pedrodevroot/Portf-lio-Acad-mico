@@ -1,0 +1,4 @@
+$kind: collection
+description: Coleção para testar a API do portfólio (projetos, cursos, formações).
+variables:
+  baseUrl: http://localhost:3000

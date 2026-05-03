@@ -1,0 +1,11 @@
+# Use this workspace to collaborate
+workspace:
+  id: 6ca5c444-0450-480f-8bb9-cfd6ef69fb03
+
+localResources:
+  collections:
+    - ..\server\portfolio.postman_collection.json
+
+cloudResources:
+  collections:
+    ..\postman\collections\Portfólio Acadêmico - API: 6ed30252-d30a-4650-b6b6-749fc2834225

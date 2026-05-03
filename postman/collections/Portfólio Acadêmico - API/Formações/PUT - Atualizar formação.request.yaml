@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{baseUrl}}/api/formacoes/1"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "nome": "DSM - 2º semestre",
+      "instituicao": "FATEC SJC"
+    }
+order: 4000

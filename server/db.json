@@ -1,0 +1,47 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "nome": "Janosys Project",
+      "imagem": "assets/img/janosys.jpg",
+      "link": "https://github.com/pedrodevroot/Janosys-Project",
+      "descricao": "Projeto desenvolvido para a prefeitura de S�o Jos� dos Campos."
+    },
+    {
+      "id": 2,
+      "nome": "Andrafer",
+      "imagem": "assets/img/andrafer.png",
+      "link": "https://github.com/pedrodevroot/AndraFer-project",
+      "descricao": "Projeto AndraFer desenvolvido para gerenciamento e automação."
+    },
+    {
+      "id": 3,
+      "nome": "Novo Projeto",
+      "link": "https://github.com/pedrodevroot/novo-projeto",
+      "imagem": "assets/img/novo.png",
+      "descricao": "Descrição do novo projeto"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "nome": "Técnico em Informática",
+      "instituicao": "ETEC Machado de Assis",
+      "periodo": "2017 - 2018"
+    },
+    {
+      "id": 2,
+      "nome": "Desenvolvimento de Sistemas",
+      "instituicao": "ETEC Machado de Assis",
+      "periodo": "2018 - 2019"
+    }
+  ],
+  "formacoes": [
+    {
+      "id": 1,
+      "nome": "Desenvolvimento de Software Multiplataforma",
+      "instituicao": "FATEC",
+      "pdf": ""
+    }
+  ]
+}
