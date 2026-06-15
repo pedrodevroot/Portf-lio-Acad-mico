@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Dark mode via class on <html> (toggle), not OS preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Design tokens ---------- */
+:root {
+  --bg: #ffffff;
+  --surface: #f6f8fa;
+  --surface-2: #eef1f4;
+  --border: #d0d7de;
+  --text: #1f2328;
+  --muted: #656d76;
+  --accent: #1f883d;       /* WCAG-AA green for text on light */
+  --accent-strong: #1a7f37;
+  --accent-glow: #1f883d;  /* decorative */
+  --danger: #cf222e;
+}
+
+.dark {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #1c2330;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #3fb950;       /* readable green on dark */
+  --accent-strong: #56d364;
+  --accent-glow: #00ff88;  /* neon, decorative only */
+  --danger: #f85149;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-glow: var(--accent-glow);
+  --color-danger: var(--danger);
+
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
