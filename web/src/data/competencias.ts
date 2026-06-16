@@ -1,7 +1,5 @@
 import type { CategoriaCompetencia } from '@/types'
 
-// Dashboard de competências — migrado do portfólio atual.
-// 'valor' (0-100) alimenta o gráfico radar; 'nivel' usa a rubrica da Fatec.
 export const competencias: CategoriaCompetencia[] = [
   {
     titulo: 'Back-End',
@@ -45,7 +43,6 @@ export const competencias: CategoriaCompetencia[] = [
   },
 ]
 
-// Resumo para o radar da home (média por categoria)
 export const radarResumo = competencias.map((c) => ({
   area: c.titulo,
   valor: Math.round(c.skills.reduce((s, k) => s + k.valor, 0) / c.skills.length),

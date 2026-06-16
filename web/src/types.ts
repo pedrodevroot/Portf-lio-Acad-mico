@@ -1,4 +1,3 @@
-// Níveis de proficiência usados pela rubrica da Fatec (Projeto Integrador / API)
 export type NivelProf =
   | 'Ouvi falar'
   | 'Com ajuda'
@@ -9,8 +8,8 @@ export type PapelProjeto = 'Desenvolvedor' | 'Scrum Master' | 'Product Owner';
 
 export interface Tecnologia {
   nome: string;
-  finalidade: string; // o que faz no projeto
-  onde: string; // em que camada/parte foi usada
+  finalidade: string;
+  onde: string;
 }
 
 export interface SoftSkillStar {
@@ -23,15 +22,15 @@ export interface SoftSkillStar {
 export interface ProjetoAPI {
   slug: string;
   nome: string;
-  resumo: string; // 1 linha para o card
-  semestre: number; // 1..6
+  resumo: string;
+  semestre: number;
   ano: number;
   empresaParceira: string;
   tipo: 'Web' | 'Mobile' | 'Desktop';
   papeis: PapelProjeto[];
   capa: string;
-  destaque?: boolean; // aparece na home
-  problema: string; // contexto + dor, SEM citar a solução
+  destaque?: boolean;
+  problema: string;
   solucao: string;
   tecnologias: Tecnologia[];
   contribuicoes: string[];
@@ -42,7 +41,7 @@ export interface ProjetoAPI {
 
 export interface CategoriaCompetencia {
   titulo: string;
-  skills: { nome: string; nivel: NivelProf; valor: number }[]; // valor 0-100 p/ gráfico
+  skills: { nome: string; nivel: NivelProf; valor: number }[];
 }
 
 export interface Experiencia {
@@ -67,7 +66,7 @@ export interface Certificado {
   instituicao: string;
   ano: number;
   cargaHoraria?: string;
-  arquivo?: string; // pdf ou imagem
+  arquivo?: string;
 }
 
 export interface Evento {

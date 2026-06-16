@@ -6,7 +6,6 @@ import { Footer } from './Footer'
 export function Layout() {
   const { pathname } = useLocation()
 
-  // Volta ao topo a cada navegação de rota
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
   }, [pathname])

@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom'
 import type { NivelProf } from '@/types'
 import { cn, nivelMeta } from '@/lib/utils'
 
-/** Largura máxima + padding responsivo. */
 export function Container({ children, className }: { children: ReactNode; className?: string }) {
   return <div className={cn('mx-auto w-full max-w-6xl px-5 sm:px-8', className)}>{children}</div>
 }
 
-/** Bloco de seção com título e subtítulo, com fade-up ao entrar na viewport. */
 export function Section({
   id,
   eyebrow,
@@ -51,7 +49,6 @@ export function Section({
   )
 }
 
-/** Card base com borda e leve glow no hover. */
 export function Card({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <div
@@ -74,7 +71,6 @@ export function Chip({ children }: { children: ReactNode }) {
   )
 }
 
-/** Badge de nível de proficiência (rubrica Fatec). */
 export function NivelBadge({ nivel }: { nivel: NivelProf }) {
   const m = nivelMeta[nivel]
   return (
@@ -82,7 +78,6 @@ export function NivelBadge({ nivel }: { nivel: NivelProf }) {
   )
 }
 
-/** Botão/link estilizado. */
 export function Button({
   children,
   to,
@@ -118,7 +113,6 @@ export function Button({
   )
 }
 
-/** Wrapper de animação fade-up reutilizável. */
 export function FadeUp({
   children,
   delay = 0,

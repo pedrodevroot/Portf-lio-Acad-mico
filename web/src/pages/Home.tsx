@@ -9,7 +9,6 @@ import { asset } from '@/lib/utils'
 import { perfil } from '@/data/perfil'
 import { projetos } from '@/data/projetos'
 
-// Recharts é pesado: carrega só depois do hero pintar.
 const SkillRadar = lazy(() =>
   import('@/components/SkillRadar').then((m) => ({ default: m.SkillRadar })),
 )
@@ -21,7 +20,6 @@ export function Home() {
     <>
       <Seo title="Início" description={perfil.resumoCurto} />
 
-      {/* HERO */}
       <Container className="grid items-center gap-10 py-16 sm:py-24 md:grid-cols-[1.4fr_1fr]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -74,7 +72,6 @@ export function Home() {
         </motion.div>
       </Container>
 
-      {/* STACK */}
       <Container>
         <div className="flex flex-wrap items-center gap-2 border-y border-border py-5">
           <span className="mr-2 font-mono text-xs text-muted">STACK</span>
@@ -84,7 +81,6 @@ export function Home() {
         </div>
       </Container>
 
-      {/* PROJETOS EM DESTAQUE */}
       <Section eyebrow="// projetos" title="Projetos em destaque">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {destaques.map((p) => (
@@ -98,7 +94,6 @@ export function Home() {
         </div>
       </Section>
 
-      {/* COMPETÊNCIAS (resumo) */}
       <Section eyebrow="// competências" title="Panorama técnico">
         <div className="grid items-center gap-8 md:grid-cols-2">
           <Suspense fallback={<div className="h-72 w-full animate-pulse rounded-2xl bg-surface" />}>

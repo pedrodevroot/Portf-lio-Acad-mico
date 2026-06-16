@@ -1,4 +1,3 @@
-// Ícones de marca (não incluídos no lucide-react v1).
 type Props = { size?: number; className?: string }
 
 export function Github({ size = 22, className }: Props) {

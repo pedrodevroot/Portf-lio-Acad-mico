@@ -46,7 +46,6 @@ export function Sobre() {
         </div>
       </Section>
 
-      {/* EXPERIÊNCIA — timeline */}
       <Section eyebrow="// experiência" title="Experiência profissional" className="pt-0">
         <div className="relative space-y-8 border-l border-border pl-6">
           {experiencias.map((exp, i) => (

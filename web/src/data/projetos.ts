@@ -1,11 +1,5 @@
 import type { ProjetoAPI } from '@/types'
 
-/**
- * IMPORTANTE: o conteúdo abaixo foi estruturado a partir do que existe hoje no
- * portfólio. Os trechos marcados com [PREENCHER] devem ser ajustados por você
- * com os dados reais de cada Projeto API da Fatec — especialmente o PROBLEMA
- * (contexto de negócio, sem citar a solução) e as CONTRIBUIÇÕES individuais.
- */
 export const projetos: ProjetoAPI[] = [
   {
     slug: 'janosys',
@@ -39,7 +33,6 @@ export const projetos: ProjetoAPI[] = [
       { nome: 'Docker', finalidade: 'containerização da aplicação', onde: 'infraestrutura' },
       { nome: 'AWS', finalidade: 'hospedagem do ambiente', onde: 'infraestrutura' },
     ],
-    // AJUSTE: mantenha apenas o que você fez pessoalmente como Dev Team.
     contribuicoes: [
       'Atuei no Dev Team desenvolvendo os painéis de dados e a interatividade dos gráficos no front-end.',
       'Implementei os filtros por região e por faixa etária sobre os dados do censo.',
@@ -54,7 +47,6 @@ export const projetos: ProjetoAPI[] = [
       { tech: 'Plotly', nivel: 'Com ajuda' },
       { tech: 'Docker', nivel: 'Com autonomia' },
     ],
-    // AJUSTE: troque pela situação real que você viveu no time.
     softSkills: [
       {
         competencia: 'Trabalho em equipe (Scrum)',
@@ -101,7 +93,6 @@ export const projetos: ProjetoAPI[] = [
       { nome: 'Docker', finalidade: 'containerização da aplicação', onde: 'infraestrutura' },
       { nome: 'AWS', finalidade: 'hospedagem do ambiente', onde: 'infraestrutura' },
     ],
-    // AJUSTE: refine com as decisões de produto que foram realmente suas.
     contribuicoes: [
       'Como Product Owner, traduzi as necessidades da Akaer em um backlog de produto com 21 user stories priorizadas.',
       'Defini os critérios de aceitação (DoR/DoD) e priorizei as histórias por valor de negócio junto ao time.',
@@ -115,7 +106,6 @@ export const projetos: ProjetoAPI[] = [
       { tech: 'React', nivel: 'Com autonomia' },
       { tech: 'MySQL', nivel: 'Com autonomia' },
     ],
-    // AJUSTE: troque pela situação real que você viveu como PO.
     softSkills: [
       {
         competencia: 'Gestão de produto & comunicação',
@@ -152,14 +142,12 @@ export const projetos: ProjetoAPI[] = [
       'Landing page que captura os dados dos interessados por meio de um formulário e os direciona ' +
       'automaticamente para o WhatsApp e o e-mail da empresa, criando um canal de contato direto e ' +
       'centralizando os leads em um só fluxo.',
-    // CONFIRME: o stack abaixo é uma suposição (landing de captação). Ajuste conforme o backlog real.
     tecnologias: [
       { nome: 'JavaScript', finalidade: 'lógica do formulário e validações', onde: 'front-end' },
       { nome: 'HTML & CSS', finalidade: 'estrutura e estilo da landing page', onde: 'front-end' },
       { nome: 'WhatsApp (wa.me)', finalidade: 'envio do lead direto para a conversa', onde: 'integração' },
       { nome: 'E-mail', finalidade: 'encaminhamento dos leads para a empresa', onde: 'integração' },
     ],
-    // AJUSTE: confirme/refine com o que consta no seu backlog do repositório.
     contribuicoes: [
       'Projeto freelance desenvolvido de ponta a ponta, do levantamento de requisitos com o cliente à entrega.',
       'Desenvolvi a landing page e o formulário de captação de leads.',

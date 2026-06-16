@@ -17,7 +17,6 @@ export function Curriculo() {
           <FileText size={16} /> Baixar currículo em PDF
         </Button>
 
-        {/* Formação */}
         <div className="mt-10">
           <h3 className="mb-4 flex items-center gap-2 font-display text-xl font-bold">
             <GraduationCap size={20} className="text-accent" /> Formação acadêmica
@@ -48,7 +47,6 @@ export function Curriculo() {
           </div>
         </div>
 
-        {/* Idiomas + Soft skills */}
         <div className="mt-8 grid gap-4 md:grid-cols-2">
           <Card>
             <h3 className="mb-3 flex items-center gap-2 font-display font-semibold">
@@ -76,7 +74,6 @@ export function Curriculo() {
         </div>
       </Section>
 
-      {/* DASHBOARD DE COMPETÊNCIAS */}
       <Section
         eyebrow="// dashboard"
         title="Dashboard de competências"

@@ -12,7 +12,6 @@ export function Trajetoria() {
         description="Produções acadêmicas, certificados e eventos de Pedro Lucas."
       />
 
-      {/* Produções acadêmicas — estilo Scholar */}
       <Section eyebrow="// trajetória" title="Produções acadêmicas">
         <div className="space-y-4">
           {producoes.map((p) => (
@@ -42,7 +41,6 @@ export function Trajetoria() {
         </div>
       </Section>
 
-      {/* Certificados */}
       <Section eyebrow="// certificados" title="Certificados" className="pt-0">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {certificados.map((c) => (
@@ -71,7 +69,6 @@ export function Trajetoria() {
         </div>
       </Section>
 
-      {/* Eventos — timeline */}
       <Section eyebrow="// eventos" title="Eventos & participações" className="pt-0">
         <div className="relative space-y-6 border-l border-border pl-6">
           {eventos.map((e) => (

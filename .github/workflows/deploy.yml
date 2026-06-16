@@ -5,13 +5,11 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Permissões necessárias para publicar no Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Garante um deploy por vez
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -39,8 +37,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Fallback de SPA: o GitHub Pages serve 404.html para rotas desconhecidas,
-      # então copiamos o index para que o React Router assuma as rotas internas.
       - name: SPA fallback (404.html)
         run: cp dist/index.html dist/404.html
 

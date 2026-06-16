@@ -1,11 +1,9 @@
 import type { NivelProf } from '@/types'
 
-/** Junta classes condicionais (mini clsx). */
 export function cn(...parts: Array<string | false | null | undefined>): string {
   return parts.filter(Boolean).join(' ')
 }
 
-/** Cor/peso visual de cada nível de proficiência (rubrica Fatec). */
 export const nivelMeta: Record<NivelProf, { peso: number; classe: string; label: string }> = {
   'Ouvi falar': { peso: 1, classe: 'bg-surface-2 text-muted border-border', label: 'Ouvi falar' },
   'Com ajuda': {
@@ -25,11 +23,6 @@ export const nivelMeta: Record<NivelProf, { peso: number; classe: string; label:
   },
 }
 
-/**
- * Resolve um caminho de asset público respeitando o base path do Vite
- * (ex.: /Portf-lio-Acad-mico/ no GitHub Pages, / em dev).
- * Use para imagens e PDFs vindos de strings em `src`/`href`.
- */
 export const asset = (path: string) =>
   import.meta.env.BASE_URL.replace(/\/$/, '') + (path.startsWith('/') ? path : `/${path}`)
 

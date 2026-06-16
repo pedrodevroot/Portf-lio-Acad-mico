@@ -35,7 +35,6 @@ export function ProjetoDetalhe() {
           <ArrowLeft size={15} /> Projetos / {projeto.nome}
         </Link>
 
-        {/* Header */}
         <FadeUp>
           <h1 className="font-display text-3xl font-bold sm:text-5xl">{projeto.nome}</h1>
           <p className="mt-2 font-mono text-sm text-accent">
@@ -68,7 +67,6 @@ export function ProjetoDetalhe() {
           </div>
         </FadeUp>
 
-        {/* Problema */}
         <FadeUp className="mt-10">
           <Card className="border-danger/40 bg-danger/5">
             <h2 className="mb-3 flex items-center gap-2 font-display text-xl font-bold text-danger">
@@ -78,7 +76,6 @@ export function ProjetoDetalhe() {
           </Card>
         </FadeUp>
 
-        {/* Solução */}
         <FadeUp className="mt-6">
           <Card className="border-accent/40 bg-accent/5">
             <h2 className="mb-3 flex items-center gap-2 font-display text-xl font-bold text-accent">
@@ -88,7 +85,6 @@ export function ProjetoDetalhe() {
           </Card>
         </FadeUp>
 
-        {/* Tecnologias */}
         <FadeUp className="mt-10">
           <h2 className="mb-4 flex items-center gap-2 font-display text-2xl font-bold">
             <Wrench size={22} className="text-accent" /> Tecnologias utilizadas
@@ -118,7 +114,6 @@ export function ProjetoDetalhe() {
           </div>
         </FadeUp>
 
-        {/* Contribuições — destaque */}
         <FadeUp className="mt-10">
           <Card className="border-accent/50 bg-gradient-to-br from-accent/10 to-transparent">
             <h2 className="mb-2 flex items-center gap-2 font-display text-2xl font-bold">
@@ -138,7 +133,6 @@ export function ProjetoDetalhe() {
           </Card>
         </FadeUp>
 
-        {/* Hard skills */}
         <FadeUp className="mt-10">
           <h2 className="mb-4 font-display text-2xl font-bold">Hard skills do projeto</h2>
           <div className="flex flex-wrap gap-3">
@@ -154,7 +148,6 @@ export function ProjetoDetalhe() {
           </div>
         </FadeUp>
 
-        {/* Soft skills — STAR */}
         <FadeUp className="mt-10">
           <h2 className="mb-4 flex items-center gap-2 font-display text-2xl font-bold">
             <Users size={22} className="text-accent" /> Soft skills (Situação → Ação → Resultado)
@@ -182,7 +175,6 @@ export function ProjetoDetalhe() {
           </div>
         </FadeUp>
 
-        {/* Próximo projeto */}
         {prox && (
           <div className="mt-12 border-t border-border pt-6">
             <Link
