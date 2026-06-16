@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { GraduationCap, Languages, FileText, Heart } from 'lucide-react'
 import { Seo } from '@/components/Seo'
 import { Section, Card, Button, NivelBadge, FadeUp, Chip } from '@/components/ui'
+import { asset } from '@/lib/utils'
 import { perfil } from '@/data/perfil'
 import { formacoes, idiomas, softSkillsGerais } from '@/data/curriculo'
 import { competencias } from '@/data/competencias'
@@ -12,7 +13,7 @@ export function Curriculo() {
       <Seo title="Currículo" description="Formação, competências técnicas e soft skills de Pedro Lucas." />
 
       <Section eyebrow="// currículo" title="Currículo">
-        <Button href={perfil.cv} target="_blank" rel="noopener" download>
+        <Button href={asset(perfil.cv)} target="_blank" rel="noopener" download>
           <FileText size={16} /> Baixar currículo em PDF
         </Button>
 

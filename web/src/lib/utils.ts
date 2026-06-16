@@ -25,6 +25,14 @@ export const nivelMeta: Record<NivelProf, { peso: number; classe: string; label:
   },
 }
 
+/**
+ * Resolve um caminho de asset público respeitando o base path do Vite
+ * (ex.: /Portf-lio-Acad-mico/ no GitHub Pages, / em dev).
+ * Use para imagens e PDFs vindos de strings em `src`/`href`.
+ */
+export const asset = (path: string) =>
+  import.meta.env.BASE_URL.replace(/\/$/, '') + (path.startsWith('/') ? path : `/${path}`)
+
 export const slugify = (s: string) =>
   s
     .normalize('NFD')

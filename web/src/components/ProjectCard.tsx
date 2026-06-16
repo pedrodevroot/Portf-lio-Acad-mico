@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import type { ProjetoAPI } from '@/types'
 import { Chip } from '@/components/ui'
+import { asset } from '@/lib/utils'
 
 export function ProjectCard({ projeto }: { projeto: ProjetoAPI }) {
   return (
@@ -13,7 +14,7 @@ export function ProjectCard({ projeto }: { projeto: ProjetoAPI }) {
       >
         <div className="relative aspect-video overflow-hidden bg-surface-2">
           <img
-            src={projeto.capa}
+            src={asset(projeto.capa)}
             alt={projeto.nome}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

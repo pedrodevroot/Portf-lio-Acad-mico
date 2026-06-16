@@ -3,6 +3,7 @@ import { Mail, FileText, Copy, Check } from 'lucide-react'
 import { Github, Linkedin } from '@/components/BrandIcons'
 import { Seo } from '@/components/Seo'
 import { Section, Card, Button } from '@/components/ui'
+import { asset } from '@/lib/utils'
 import { perfil } from '@/data/perfil'
 
 export function Contato() {
@@ -57,7 +58,7 @@ export function Contato() {
             {copied ? <Check size={16} /> : <Copy size={16} />}
             {copied ? 'E-mail copiado!' : 'Copiar e-mail'}
           </button>
-          <Button href={perfil.cv} variant="ghost" target="_blank" rel="noopener" download>
+          <Button href={asset(perfil.cv)} variant="ghost" target="_blank" rel="noopener" download>
             <FileText size={16} /> Baixar CV
           </Button>
         </div>

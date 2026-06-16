@@ -1,6 +1,7 @@
 import { Award, CalendarDays, BookOpen, ExternalLink, FileText } from 'lucide-react'
 import { Seo } from '@/components/Seo'
 import { Section, Card, Chip, FadeUp } from '@/components/ui'
+import { asset } from '@/lib/utils'
 import { certificados, eventos, producoes } from '@/data/trajetoria'
 
 export function Trajetoria() {
@@ -56,7 +57,7 @@ export function Trajetoria() {
                 </div>
                 {c.arquivo && (
                   <a
-                    href={c.arquivo}
+                    href={asset(c.arquivo)}
                     target="_blank"
                     rel="noopener"
                     className="mt-3 inline-flex items-center gap-1 text-sm text-accent hover:underline"

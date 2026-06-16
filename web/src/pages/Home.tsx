@@ -5,6 +5,7 @@ import { Github, Linkedin } from '@/components/BrandIcons'
 import { Seo } from '@/components/Seo'
 import { Container, Section, Button, Chip } from '@/components/ui'
 import { ProjectCard } from '@/components/ProjectCard'
+import { asset } from '@/lib/utils'
 import { perfil } from '@/data/perfil'
 import { projetos } from '@/data/projetos'
 
@@ -38,7 +39,7 @@ export function Home() {
             <Button to="/projetos">
               Ver projetos <ArrowRight size={16} />
             </Button>
-            <Button href={perfil.cv} variant="ghost" target="_blank" rel="noopener" download>
+            <Button href={asset(perfil.cv)} variant="ghost" target="_blank" rel="noopener" download>
               <FileText size={16} /> Baixar CV
             </Button>
           </div>
@@ -65,7 +66,7 @@ export function Home() {
           <div className="relative">
             <div className="absolute -inset-2 rounded-full bg-accent/20 blur-2xl" />
             <img
-              src={perfil.foto}
+              src={asset(perfil.foto)}
               alt={`Foto de ${perfil.nome}`}
               className="relative h-52 w-52 rounded-full border-4 border-surface object-cover sm:h-64 sm:w-64"
             />

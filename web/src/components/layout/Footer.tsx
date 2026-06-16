@@ -1,6 +1,7 @@
 import { Mail, FileText } from 'lucide-react'
 import { Github, Linkedin } from '@/components/BrandIcons'
 import { Container, Button } from '@/components/ui'
+import { asset } from '@/lib/utils'
 import { perfil } from '@/data/perfil'
 
 export function Footer() {
@@ -16,7 +17,7 @@ export function Footer() {
           <Button href={`mailto:${perfil.email}`}>
             <Mail size={16} /> Enviar e-mail
           </Button>
-          <Button href={perfil.cv} variant="ghost" target="_blank" rel="noopener" download>
+          <Button href={asset(perfil.cv)} variant="ghost" target="_blank" rel="noopener" download>
             <FileText size={16} /> Baixar CV
           </Button>
         </div>
